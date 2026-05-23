@@ -1,0 +1,115 @@
+/*sections------------------------------------------------------------------- */
+body {
+  background-color: #F5DC61;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+#wrapper {
+  max-width: 110em;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #CDF5EC;
+  padding-right: 0.625em;
+  padding-left: 0.625em;
+}
+
+main  {
+    margin-top: 0.625em;
+	margin-bottom: 0.25em;
+}
+
+.menu {
+    background-color: #B5DCF0;
+    padding-top: 0.125em;
+	padding-bottom: 0.125em;
+}
+
+nav {
+    background-color: #B5DCF0;
+}
+
+/*headings------------------------------------------------------------------- */
+h1	{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #E83E33;
+    font-size: 3.75em;
+    line-height: 1.25em;
+    text-shadow: 0.25em 0.25em 0.25em #aaa;
+}
+h2	{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2.5em;
+    line-height: 0.75em;
+}
+h3 	{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    line-height: 0.5em;
+}
+
+/*Text------------------------------------------------------------------- */
+
+.center{
+    text-align: center;
+}
+
+/*Images------------------------------------------------------------------- */
+img{
+    max-width: 100%;
+}
+
+
+/* -----------------------
+Grid layout
+------------------------*/
+
+.banner {grid-area: banner;}
+.menu {grid-area: menu;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+#wrapper {
+  display: grid;
+  grid-gap: 1.25em;
+  grid-template-areas:
+   "banner"
+   "menu"
+   "nav"
+   "main"
+   "footer";
+}
+
+@media screen and (min-width: 40em) {
+    
+  #wrapper {
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+      "nav  main"
+      "footer  footer";
+  }
+   
+   .fltrt {
+	    float: right;
+	    margin-left: 0.5em;
+    }
+    
+    .fltlt {
+	    float: left;
+	    margin-right: 0.5em;
+    }
+    
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.clear { /* this class can be placed on an element or empty div as the final element following the last floated div */
+	clear: both;
+}
